@@ -3,11 +3,11 @@ import java.util.*;
 public class ThreeSumWithMultiplicity {
 
     public int threeSumMulti(int[] arr, int target) {
-        TreeMap<Integer,Integer> map = new TreeMap<>();
+        TreeMap<Integer,Long> map = new TreeMap<>();
         long res = 0;
         int mod = 1000000007;
         for(int i : arr){
-            map.put(i, map.getOrDefault(i, 0) + 1);
+            map.put(i, map.getOrDefault(i, res) + 1);
         }
         for(int i : map.keySet()){
             res += helper(i, target - i, mod, map);
@@ -16,7 +16,7 @@ public class ThreeSumWithMultiplicity {
         return (int)res;
     }
 
-    private int helper(int i, int target, int mod, TreeMap<Integer,Integer> map){
+    private int helper(int i, int target, int mod, TreeMap<Integer,Long> map){
         long res = 0;
         int first = i, last = map.lastKey();
         while(first <= last){
