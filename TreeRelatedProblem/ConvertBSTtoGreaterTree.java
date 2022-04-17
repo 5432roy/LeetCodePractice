@@ -1,3 +1,5 @@
+package TreeRelatedProblem;
+
 public class ConvertBSTtoGreaterTree {
 
     public TreeNode convertBST(TreeNode node) {
