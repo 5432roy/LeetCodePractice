@@ -35,6 +35,25 @@ public class Triangle {
         }
         return min;
     }
+    
+    // top-down dp
+    public int minimumTotal(List<List<Integer>> triangle) {
+        int[][] memo = new int[triangle.size()][];
+        for(int i = 0; i < triangle.size(); i++) {
+            memo[i] = new int[i + 1];
+            Arrays.fill(memo[i], Integer.MIN_VALUE);
+        }
+        helper(triangle, 0, 0, memo);
+        //System.out.println(Arrays.deepToString(memo));
+        return memo[0][0];
+    }
+    
+    private int helper(List<List<Integer>> triangle, int level, int index, int[][] memo) {
+        if(level >= triangle.size()) return 0 ;
+        if(index > level) return Integer.MAX_VALUE;
+        if(memo[level][index] != Integer.MIN_VALUE) return memo[level][index];
+        return memo[level][index] = triangle.get(level).get(index) + Math.min(helper(triangle, level + 1, index, memo), helper(triangle, level + 1, index + 1, memo));
+    }
 
     
 }
