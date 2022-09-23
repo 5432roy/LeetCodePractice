@@ -13,4 +13,24 @@ class test {
         double m_gradient = -2 / x.length * diff;
         System.out.println(diff * -2 / x.length + ", " + (double)-2 / (double)x.length * diff);
     }
+
+    int add(int a, int b) {
+        return a + b;
+    }
 } 
+
+interface BaseI {
+    void method();
+}
+
+class BaseC {
+    public void method() {
+        System.out.println("s");
+    }
+}
+
+class ImplC extends BaseC implements BaseI {
+    public static void main(String[] args) {
+        (new ImplC()).method();
+    }
+}
