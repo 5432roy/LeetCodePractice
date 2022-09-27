@@ -1,5 +1,4 @@
 package FlattenNestedListIterator;
-import java.util.*;
 /**
  * // This is the interface that allows for creating nested lists.
  * // You should not implement it, or speculate about its implementation
