@@ -19,7 +19,7 @@ public class RemoveNthNodeFromEndofList {
         return head;
     }
 
-    //twoPointerVersion
+    //twoPointerVersion >> better
     public ListNode removeNthNodeFromEnd2(ListNode head, int n){
         ListNode newHead = new ListNode();
         newHead.next = head;
@@ -36,6 +36,25 @@ public class RemoveNthNodeFromEndofList {
             back = back.next;
         }
         back.next = back.next.next;
+        return newHead.next;
+    }
+
+    //Stack version
+    public ListNode removeNthFromEnd3(ListNode head, int n) {
+        Stack<ListNode> stack = new Stack<>();
+        ListNode newHead = new ListNode();
+        newHead.next = head;
+        ListNode runner = newHead;
+        while(runner != null) {
+            stack.push(runner);
+            runner = runner.next;
+        }
+        for(int i = 0; i < n; i++) {
+            stack.pop();
+        }
+        runner = stack.pop();
+        runner.next = runner.next.next;
+        
         return newHead.next;
     }
     
