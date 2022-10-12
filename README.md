@@ -1,2 +1,4 @@
 # LeetCodePractice
-Code for algorithms and data structure practice
+This is a storage that keep tarck of my coding practice on Leetcode.
+
+Language Used: Java(Majority), Python(Start doing it).
