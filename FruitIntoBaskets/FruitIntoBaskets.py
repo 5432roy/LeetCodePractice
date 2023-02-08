@@ -12,7 +12,7 @@ https://leetcode.com/problems/fruit-into-baskets/description/
 """
 
 class Solution:
-    def totalFruit(self, fruits: List[int]) -> int:
+    def totalFruit(self, fruits: list[int]) -> int:
         res, prev = 0, -1
         memo = {}
         queue = []
