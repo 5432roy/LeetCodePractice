@@ -1,4 +1,4 @@
-package Easy;
+package Easy_problem;
 
 public class ValidMountainArray {
     public boolean validMountainArray(int[] arr) {

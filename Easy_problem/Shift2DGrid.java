@@ -1,4 +1,4 @@
-package Easy;
+package Easy_problem;
 import java.util.*;
 public class Shift2DGrid {
 
