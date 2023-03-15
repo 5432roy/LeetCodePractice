@@ -4,7 +4,7 @@ This is a storage that keep tarck of my coding practice on Leetcode.
 
 Each folder is corresponding to one problem and may contains multiple solutions.
 
-## Language Used: `Java`, `Python`
+## Language Used: `Java`, `Python3`
 
 Start from 2023, the solutions contain question prompt.
 
