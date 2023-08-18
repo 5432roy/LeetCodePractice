@@ -11,7 +11,7 @@ class Solution:
     Given the integer n and the array roads, return the maximal network rank of the entire infrastructure.
     """
 
-    def maximalNetworkRank(self, n: int, roads: List[List[int]]) -> int:
+    def maximalNetworkRank(self, n: int, roads) -> int:
         """
         simply graph problem, could have improve the time complexity by changing memo into a dictionary of set.
         Reduce the following code from O(n) to O(1) => if [sorted_memo[i][0], sorted_memo[j][0]] in roads or [sorted_memo[j][0], sorted_memo[i][0]] in roads 
