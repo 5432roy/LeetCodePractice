@@ -18,9 +18,10 @@ class Solution {
         int start = 0, end = 0, res = days;
 
         for(int[] meeting : meetings) {
-            if(meeting[1] <= end) {
-                continue;
-            }
+            /* Not necessary line */
+            // if(meeting[1] <= end) {
+            //     continue;
+            // }
             if(meeting[0] > end) {
                 res -= end - start + 1;
                 start = meeting[0];
