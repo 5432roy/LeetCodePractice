@@ -1,5 +1,12 @@
 package LargestDivisibleSubset;
 import java.util.*;
+
+/*
+ * 368. Largest Divisible Subset
+ * https://leetcode.com/problems/largest-divisible-subset/description/?envType=daily-question&envId=2025-04-06
+ * 
+ * dp
+ */
 public class LargestDivisibleSubset {
 
     public List<Integer> largestDivisibleSubset(int[] nums){
